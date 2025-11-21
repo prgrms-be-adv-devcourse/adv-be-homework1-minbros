@@ -1,7 +1,7 @@
-package grepp.homework.dto;
+package grepp.homework.order.application.dto;
 
-import grepp.homework.entity.PurchaseOrder;
-import grepp.homework.entity.PurchaseOrderStatus;
+import grepp.homework.order.domain.PurchaseOrder;
+import grepp.homework.order.domain.PurchaseOrderStatus;
 
 import java.math.BigDecimal;
 import java.util.UUID;

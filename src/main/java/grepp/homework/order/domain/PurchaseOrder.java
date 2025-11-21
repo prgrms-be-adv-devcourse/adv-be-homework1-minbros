@@ -1,6 +1,6 @@
-package grepp.homework.entity;
+package grepp.homework.order.domain;
 
-import grepp.homework.dto.OrderCommand;
+import grepp.homework.order.application.dto.OrderCommand;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -62,5 +62,9 @@ public class PurchaseOrder {
 
     public void markPaid() {
         this.status = PurchaseOrderStatus.PAID;
+    }
+
+    public void markCanceled() {
+        this.status = PurchaseOrderStatus.CANCELLED;
     }
 }

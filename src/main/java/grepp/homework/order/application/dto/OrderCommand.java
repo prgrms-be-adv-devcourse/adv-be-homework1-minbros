@@ -1,4 +1,6 @@
-package grepp.homework.dto;
+package grepp.homework.order.application.dto;
+
+import grepp.homework.order.presentation.dto.OrderRequest;
 
 import java.util.UUID;
 
