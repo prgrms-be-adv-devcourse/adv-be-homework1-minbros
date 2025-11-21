@@ -2,5 +2,27 @@ spring:
   application:
     name: homework
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/homework1
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: Asia/Seoul
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+  default-flat-param-object: true
+
 api:
   v1: api/v1
