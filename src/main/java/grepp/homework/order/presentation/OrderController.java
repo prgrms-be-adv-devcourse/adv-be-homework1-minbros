@@ -5,6 +5,7 @@ import grepp.homework.order.application.dto.OrderInfo;
 import grepp.homework.order.presentation.dto.OrderRequest;
 import grepp.homework.order.application.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -20,6 +21,7 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("${api.v1}/orders")
+@Tag(name = "주문 API")
 public class OrderController {
     private final OrderService orderService;
 
