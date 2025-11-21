@@ -3,10 +3,10 @@ spring:
     name: homework
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/homework1
+    url: ${DB_URL}
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: postgres
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
@@ -26,3 +26,7 @@ springdoc:
 
 api:
   v1: api/v1
+
+payment:
+  toss:
+    secret-key: ${TOSS_SECRET_KEY}
