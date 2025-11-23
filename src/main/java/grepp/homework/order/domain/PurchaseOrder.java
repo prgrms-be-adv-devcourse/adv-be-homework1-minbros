@@ -53,7 +53,6 @@ public class PurchaseOrder {
     public static PurchaseOrder from(OrderCommand command) {
         return PurchaseOrder.builder()
                 .productId(command.productId())
-                .sellerId(command.memberId())
                 .memberId(command.memberId())
                 .amount(BigDecimal.valueOf(DEFAULT_AMOUNT))
                 .status(PurchaseOrderStatus.CREATED)
@@ -66,5 +65,12 @@ public class PurchaseOrder {
 
     public void markCanceled() {
         this.status = PurchaseOrderStatus.CANCELLED;
+    }
+
+    @PrePersist
+    public void onCreate() {
+        if (sellerId == null) {
+            sellerId = UUID.randomUUID();
+        }
     }
 }
